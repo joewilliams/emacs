@@ -3,7 +3,7 @@
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-(setq load-path (cons "/usr/local/lib/erlang/lib/tools-2.6.6.3/emacs" load-path))
+(setq load-path (cons "/usr/local/lib/erlang/lib/tools-2.6.11//emacs" load-path))
 (setq erlang-root-dir "/usr/local/lib/erlang")
 (setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
 (require 'erlang-start)
@@ -52,6 +52,10 @@
 (require 'fill-column-indicator)
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode 1)
+
+;(setq load-path (cons "~/.emacs.d/tabbar" load-path))
+;(require 'tabbar)
+;(tabbar-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
